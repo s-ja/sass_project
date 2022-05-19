@@ -1,0 +1,42 @@
+@mixin padding($x: 0, $y: 0) {
+    padding:$x $y;
+}
+
+// @mixin corner($top_left: 0,$top_right:0,$bottom_left:0,$bottom_right:0){
+@mixin corner_all($radius:0){
+    // border-top-left-radius: $radius;
+    // border-top-right-radius: $radius;
+    // border-bottom-left-radius: $radius;
+    // border-bottom-right-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin padding_all($all){
+    padding: $all;
+}
+@mixin padding_x($all){
+    padding:0 $all;
+}
+@mixin padding_y($all){
+    padding:$all 0;
+}
+@mixin margin_all($all) {
+    margin: $all;
+}
+@mixin margin_x($all){
+    margin:0 $all;
+}
+@mixin margin_y($all){
+    margin:$all 0;
+}
+
+@mixin flex($dir: center) {
+    display: flex;
+    justify-content: $dir;
+}
+
+@mixin transition($property: all, $speed: .3s, $count: infinite) {
+    transition-property: $property;
+    transition-duration: $speed;
+    transition-timing-function: $count;
+}

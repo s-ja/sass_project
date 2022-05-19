@@ -1,0 +1,115 @@
+@use "reset";
+@use "mixin";
+
+$color_dark: #222;
+$point_color_red: rgb(255, 0, 0);
+$base_font_color: aliceblue;
+$base_font_size: 16px;
+$base_font_weight: normal;
+$upper: uppercase;
+$capital: capitalize;
+$limit: 1190px;
+%margin_auto {
+    margin: 0 auto;
+}
+
+.bg_black{
+    background: $color_dark;
+    // display: flex;
+    // justify-content: center;
+    @include mixin.flex(center);
+    align-items: center;
+    @include mixin.padding_y(15px);
+    
+
+    h2{
+        font: {
+            size: $base_font_size;
+            // weight: bolder;
+            // weight: $base_font_weight;
+            weight: bolder;
+        }
+        background: darken($point_color_red,30%);
+        // color: darken($base_font_color, 10%);
+        color: $base_font_color;
+        // display: inline-block;
+        @include mixin.padding_all(10px);
+        @include mixin.margin_all(5px);
+        @include mixin.corner_all(20px);
+        text-transform: $upper;
+    }
+
+    p{
+        color: $base_font_color;
+        text-transform: $capital;
+        @include mixin.margin-x(10px);
+    }
+}
+
+.bg_point{
+    background: darken($point_color_red,15%);
+
+    .logo_nav_wrap{
+        @include mixin.padding_y(20px);
+        max-width: $limit;
+        @extend %margin_auto;
+        @include mixin.flex(space-between);
+        align-items: center;
+
+        .main_nav {
+            margin-left: auto;
+            @include mixin.flex;
+
+            #gnb{
+                @include mixin.flex(flex-start);
+                align-self: center;
+                column-gap: 3rem;
+                color: $base_font_color;
+
+                li{
+                    text-transform: $capital;
+                    // @include mixin.margin-x(20px);
+                    // color: $base_font_color;
+                    font-weight: bolder;
+                    
+                    & a {
+                        @include mixin.padding_all(5px);
+                        @include mixin.corner_all(5px);
+                    }
+                    
+                    &:hover a {
+                        @include mixin.transition;
+                        background-color: $color_dark;
+                        // @include mixin.corner_all(5px);
+                        // @include mixin.padding_all(5px);
+                    }
+                }
+            }
+        }
+        .to_cart{
+            // 숙제
+            position: relative;
+            background: $color_dark;
+            width: 40px;
+            height: 40px;
+            @include mixin.corner_all(8px);
+            @include mixin.flex(center);
+            align-items: center;
+            @include mixin.margin-x(10px);
+
+            .item_count{
+                background: $base_font_color;
+                color: $color_dark;
+                @include mixin.corner_all(50%);
+                @include mixin.padding_x(5px);
+                position: absolute;
+                right: -10px;
+                top: -10px;
+            }
+
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
