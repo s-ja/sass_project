@@ -1,0 +1,23 @@
+{
+  "name": "sass_project",
+  "version": "1.0.0",
+  "description": "sass_project_1st",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-ja/sass_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-ja/sass_project/issues"
+  },
+  "homepage": "https://github.com/s-ja/sass_project#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}
