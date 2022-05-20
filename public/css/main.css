@@ -30,7 +30,7 @@ ul, ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px auto;
+  padding: 15px 0;
 }
 .bg_black h2 {
   font-size: 16px;
@@ -52,7 +52,7 @@ ul, ol {
   background: #b30000;
 }
 .bg_point .logo_nav_wrap {
-  padding: 10px auto;
+  padding: 10px 0;
   max-width: 1190px;
   display: flex;
   justify-content: space-between;
@@ -127,7 +127,7 @@ ul, ol {
   font-size: 40px;
 }
 #hero_img .hero_wrap .hero_contents p {
-  margin: 1rem 0;
+  margin: 1rem auto;
 }
 #hero_img .hero_wrap .hero_contents .btn_transparent {
   background: transparent;
@@ -151,14 +151,14 @@ ul, ol {
 }
 
 #main {
-  padding: 50px auto;
+  padding: 50px 0;
 }
 #main .support {
-  padding: 25px auto;
+  padding: 25px 0;
 }
 #main .support .support_wrap {
   max-width: 1190px;
-  margin: 1rem 0;
+  margin: 1rem auto;
 }
 
 /*# sourceMappingURL=main.css.map */

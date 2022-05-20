@@ -21,8 +21,8 @@
 @mixin padding_x($all){
     padding:0 $all;
 }
-@mixin padding_y($all, $auto: auto){
-    padding:$all $auto;
+@mixin padding_y($all){
+    padding:$all 0;
 }
 @mixin margin_all($all) {
     margin: $all;
@@ -30,8 +30,8 @@
 @mixin margin_x($all){
     margin:0 $all;
 }
-@mixin margin_y($all){
-    margin:$all 0;
+@mixin margin_y($all, $auto: auto){
+    margin:$all $auto;
 }
 
 @mixin flex($dir: center) {
