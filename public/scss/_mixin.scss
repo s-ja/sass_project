@@ -2,6 +2,10 @@
     padding:$x $y;
 }
 
+@mixin border_all($width: 1px, $type:solid, $color: white) {
+    border: $width $type $color;
+}
+
 // @mixin corner($top_left: 0,$top_right:0,$bottom_left:0,$bottom_right:0){
 @mixin corner_all($radius:0){
     // border-top-left-radius: $radius;
@@ -17,8 +21,8 @@
 @mixin padding_x($all){
     padding:0 $all;
 }
-@mixin padding_y($all){
-    padding:$all 0;
+@mixin padding_y($all, $auto: auto){
+    padding:$all $auto;
 }
 @mixin margin_all($all) {
     margin: $all;

@@ -9,6 +9,7 @@ $base_font_weight: normal;
 $upper: uppercase;
 $capital: capitalize;
 $limit: 1190px;
+
 %margin_auto {
     margin: 0 auto;
 }
@@ -42,7 +43,7 @@ $limit: 1190px;
     p{
         color: $base_font_color;
         text-transform: $capital;
-        @include mixin.margin-x(10px);
+        @include mixin.margin_x(10px);
     }
 }
 
@@ -50,7 +51,7 @@ $limit: 1190px;
     background: darken($point_color_red,15%);
 
     .logo_nav_wrap{
-        @include mixin.padding_y(20px);
+        @include mixin.padding_y(10px);
         max-width: $limit;
         @extend %margin_auto;
         @include mixin.flex(space-between);
@@ -95,7 +96,7 @@ $limit: 1190px;
             @include mixin.corner_all(8px);
             @include mixin.flex(center);
             align-items: center;
-            @include mixin.margin-x(10px);
+            @include mixin.margin_x(10px);
 
             .item_count{
                 background: $base_font_color;
@@ -110,6 +111,66 @@ $limit: 1190px;
             img{
                 max-width: 100%;
             }
+        }
+    }
+}
+
+#hero_img{
+    background: url(../images/hero4.jpg) no-repeat center / cover;
+    min-height: 400px;
+    color: darken($base_font_color, 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    .hero_wrap {
+        width: $limit;
+        @extend %margin_auto;
+
+        .hero_contents{
+            width: $limit / 2.5;
+
+            h2{
+                font-size: $base_font_size * 2.5;
+            }
+            p{
+                @include mixin.margin_y(1rem);
+            }
+
+            .btn_transparent{
+                background: transparent;
+                @include mixin.padding_all(5px);
+                @include mixin.corner_all(3px);
+                @include mixin.transition;
+                
+                &:hover{
+                    background: $base_font_color;
+                    color : $color_dark;
+                }
+            }
+            .border_white{
+                @include mixin.border_all;
+                text-transform: $capital;
+                font-size: $base_font_size;
+            }
+            .color_white{
+                color: $base_font_color;
+            }
+        }
+    }
+}
+
+#main{
+    @include mixin.padding_y(50px);
+
+    .support{
+        @include mixin.padding_y(25px);
+
+        .support_wrap{
+            max-width: $limit;
+            @extend %margin_auto;
+            @include mixin.margin_y(1rem);
         }
     }
 }
