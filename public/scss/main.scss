@@ -129,7 +129,7 @@ $limit: 1190px;
         @extend %margin_auto;
 
         .hero_contents{
-            width: $limit / 2.5;
+            width: calc($limit / 5);
 
             h2{
                 font-size: $base_font_size * 2.5;
